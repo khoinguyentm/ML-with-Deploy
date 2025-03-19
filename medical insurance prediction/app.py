@@ -42,8 +42,7 @@ else:
 input_data = (age, gender, bmi, children, smoker, region)
 input_data = np.array(input_data).reshape(1, -1)
 
-prediction = model.predict(input_data)
-
-display_string = 'Insurance Premium will be $' + str(round(prediction[0])) + ' US dollars'
-
-st.markdown(display_string)
+if st.button('Predict'):
+    prediction = model.predict(input_data)
+    display_string = 'Insurance Premium will be $' + str(round(prediction[0], 2)) + ' US dollars'
+    st.markdown(display_string)
