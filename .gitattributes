@@ -1,0 +1,2 @@
+*.csv filter=lfs diff=lfs merge=lfs -text
+credit[[:space:]]card[[:space:]]fraud/*.csv filter=lfs diff=lfs merge=lfs -text
